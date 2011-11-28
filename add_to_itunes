@@ -1,0 +1,9 @@
+#!/usr/bin/osascript
+
+on run filename
+    tell application "iTunes"
+        set mac_path to filename as POSIX file
+        set video to (add mac_path)
+    end tell
+end run
+

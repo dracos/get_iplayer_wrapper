@@ -1,0 +1,23 @@
+get_iplayer_wrapper
+===================
+
+I'm running this on a Mac Mini running Mac OS X 10.5. This repository is
+checked out in ~/Applications/iPlayer with get_iplayer v2.80 in the same
+directory and various working binaries from get-iplayer-automator in Binaries.
+The Mac Mini is set to wake itself from sleep at 4am every day.
+
+You can simply run iplayer instead of get_iplayer and it passes whatever you
+enter through to it on top of its own options.
+
+Things it does:
+* Outputs to ~/Movies, in sub directories based upon program name.
+* Adds any downloaded item to iTunes automatically.
+* Sleeps the computer if given the --sleep option (the daily task uses this).
+
+Things it doesn't do:
+* Look for HD content, my bandwidth isn't up to it.
+
+To set up a daily task, you'll need to edit iplayer.plist to fix the
+username/paths (don't know if this can be done better), alter the time if you
+want, put it in ~/Library/LaunchAgents/ and add with launchctl load <path>.
+
