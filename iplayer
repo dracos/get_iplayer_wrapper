@@ -13,7 +13,7 @@ if args.count('--sleep'):
 command_args = ' '.join(args)
 
 # General options
-args  = '%s/get_iplayer --nopurge --nocopyright' % dir
+args  = '%s/get_iplayer --nopurge --nocopyright --quiet' % dir
 # Program locations
 args += ' --mplayer=Binaries/mplayer --flvstreamer=Binaries/flvstreamer_macosx --lame=Binaries/lame --atomicparsley=Binaries/AtomicParsley --ffmpeg=Binaries/ffmpeg_leopard'.replace('Binaries', os.path.join(dir, 'Binaries'))
 # Fetching options
