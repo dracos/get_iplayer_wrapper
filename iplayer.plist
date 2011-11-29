@@ -22,7 +22,7 @@
 <key>StandardOutPath</key>
 <string>/Users/matthew/Applications/iPlayer/daily.log</string>
 <key>StandardErrorPath</key>
-<string>/Users/matthew/Applications/iPlayer/daily.log</string>
+<string>/Users/matthew/Applications/iPlayer/error.log</string>
 </dict>
 </plist>
 
