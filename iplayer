@@ -12,6 +12,8 @@ if args.count('--sleep'):
     args.remove('--sleep')
 command_args = ' '.join(args)
 
+output_dir = os.path.expanduser('~/Movies')
+
 # General options
 args  = '%s/get_iplayer --nopurge --nocopyright --quiet' % dir
 # Program locations
@@ -19,7 +21,7 @@ args += ' --mplayer=Binaries/mplayer --flvstreamer=Binaries/flvstreamer_macosx -
 # Fetching options
 args += ' --attempts=5 --versions=default --modes=flashvhigh,flashhigh,flashstd,flashnormal,flashaachigh,flashaacstd,flashaudio,wma'
 # Output file options
-args += ' --output=~/Movies --whitespace --subdir --subdir-format="<nameshort>" --file-prefix="<name> - <episode>" --command \'%s/add_to_itunes "<filename>"\'' % dir
+args += ' --output=%s --whitespace --subdir --subdir-format="<nameshort>" --file-prefix="<name> - <episode>" --command \'%s/add_to_itunes "<filename>"\'' % (output_dir, dir)
 
 # TV and Radio by default (unless PVRing, in which case use whatever we have there)
 if 'pvr' not in command_args:
